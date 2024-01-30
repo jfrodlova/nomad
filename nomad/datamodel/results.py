@@ -1736,6 +1736,18 @@ class DFT(MSection):
         """,
         a_elasticsearch=Elasticsearch(material_entry_type),
     )
+    n_spin_channels = Quantity(
+        type=MEnum(core_electron_treatments),
+        default=unavailable,
+        description="""
+        How the core electrons are described.
+        """,
+        a_elasticsearch=[
+            Elasticsearch(material_entry_type),
+            Elasticsearch(suggestion='default'),
+        ],
+    )
+
     scf_threshold_energy_change = Scf.threshold_energy_change.m_copy()
     scf_threshold_energy_change.m_annotations['elasticsearch'] = Elasticsearch(
         material_entry_type

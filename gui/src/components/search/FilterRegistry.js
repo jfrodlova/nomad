@@ -292,7 +292,9 @@ registerFilter('results.method.simulation.precision.basis_set', idPrecision, {..
 registerFilter('results.method.simulation.precision.planewave_cutoff', idPrecision, {...numberHistogramQuantity, label: 'Plane-wave Cutoff', scale: '1/2'})
 registerFilter('results.method.simulation.precision.apw_cutoff', idPrecision, {...numberHistogramQuantity, label: 'APW Cutoff', scale: '1/2'})
 registerFilter('results.method.simulation.dft.core_electron_treatment', idDFT, termQuantity)
-registerFilter('results.method.simulation.dft.Van_der_Waals_method', idDFT, termQuantity)
+registerFilter('results.method.simulation.dft.van_der_Waals_method', idDFT, termQuantity)
+registerFilter('results.method.simulation.dft.spin_polarized', idDFT, {...termQuantity, label: 'Spin polarization'})
+registerFilter('results.method.simulation.dft.n_spin_channels', idDFT, {...termQuantity, label: 'Number of spin channels'})
 registerFilter('results.method.simulation.dft.jacobs_ladder', idDFT, {...termQuantity, scale: '1/2'})
 registerFilter('results.method.simulation.dft.xc_functional_type', idDFT, {
   ...termQuantity,
