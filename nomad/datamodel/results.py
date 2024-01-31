@@ -1718,17 +1718,7 @@ class DFT(MSection):
             Elasticsearch(suggestion='default'),
         ],
     )
-    Van_der_Waals_method = Quantity(
-        type=MEnum(core_electron_treatments),
-        default=unavailable,
-        description="""
-        How the core electrons are described.
-        """,
-        a_elasticsearch=[
-            Elasticsearch(material_entry_type),
-            Elasticsearch(suggestion='default'),
-        ],
-    )
+
     spin_polarized = Quantity(
         type=bool,
         description="""
@@ -1737,10 +1727,10 @@ class DFT(MSection):
         a_elasticsearch=Elasticsearch(material_entry_type),
     )
     n_spin_channels = Quantity(
-        type=MEnum(core_electron_treatments),
+        type=int,
         default=unavailable,
         description="""
-        How the core electrons are described.
+        Number of spin channels.
         """,
         a_elasticsearch=[
             Elasticsearch(material_entry_type),

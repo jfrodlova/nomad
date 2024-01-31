@@ -556,7 +556,7 @@ class DFTMethod(ElectronicMethod):
                 )
             dft.van_der_Waals_method = self._repr_method.electronic.van_der_waals_method
             dft.relativity_method = self._repr_method.electronic.relativity_method
-            dft.n_spin_channels = self._repr_method.electronic.n_spin_channels
+            dft.n_spin_channels = int(self._repr_method.electronic.n_spin_channels)
         try:
             dft.xc_functional_names = self.xc_functional_names(
                 self._repr_method.dft.xc_functional
