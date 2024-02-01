@@ -107,5 +107,8 @@
   "python.testing.pytestArgs": ["tests"],
   "python.testing.unittestEnabled": false,
   "editor.defaultFormatter": "charliermarsh.ruff",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
