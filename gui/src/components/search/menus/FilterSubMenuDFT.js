@@ -90,13 +90,13 @@ const FilterSubMenuDFT = React.memo(({
           disableSearch
         />
       </InputGridItem>
-      {/* <InputGridItem xs={12}>
+      <InputGridItem xs={12}>
         <InputField
           quantity="results.method.simulation.dft.spin_polarized"
           visible={visible}
           disableSearch
         />
-      </InputGridItem> */}
+      </InputGridItem>
       <InputGridItem xs={12}>
         <InputRange
           quantity="results.method.simulation.dft.number_spin_channels"
