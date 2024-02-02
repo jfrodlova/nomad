@@ -1727,7 +1727,7 @@ class DFT(MSection):
         a_elasticsearch=Elasticsearch(material_entry_type),
     )
     number_spin_channels = Quantity(
-        type=int,
+        type=np.int32,
         description="""
         Number of spin channels.
         """,
