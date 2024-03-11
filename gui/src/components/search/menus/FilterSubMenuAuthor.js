@@ -45,6 +45,12 @@ const FilterSubMenuAuthor = React.memo(({
         />
       </InputGridItem>
       <InputGridItem xs={12}>
+        <InputRange
+          quantity="run.time_run.date_start"
+          visible={visible}
+        />
+      </InputGridItem>
+      <InputGridItem xs={12}>
         <InputField
           quantity="external_db"
           visible={visible}

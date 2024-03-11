@@ -726,6 +726,12 @@ def validate_quantity(
     # quantities.
     quantity = doc_type.quantities.get(quantity_name)
 
+    from pprint import pprint
+    pprint(doc_type.quantities)
+    pprint(quantity_name)
+    pprint(quantity)
+    pprint(doc_type)
+
     if quantity is None:
         path, schema, dtype = parse_quantity_name(quantity_name)
         # Queries targeting YAML are translated into dynamic quantity searches

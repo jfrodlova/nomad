@@ -28,15 +28,24 @@ from nomad.metainfo import (  # pylint: disable=unused-import
     SubSection,
     SectionProxy,
     Reference,
+    Datetime
 )
 from nomad.datamodel.metainfo.simulation.method import Method
 from nomad.datamodel.metainfo.simulation.system import System
 from nomad.datamodel.metainfo.simulation.calculation import Calculation
 from nomad.datamodel.metainfo.common import FastAccess
 from nomad.datamodel.data import ArchiveSection
+from nomad.metainfo.elasticsearch_extension import (
+    Elasticsearch,
+    entry_type,
+    material_entry_type,
+)
 
 m_package = Package()
 
+#TO DO: This function should convert datetime to float. (Temporary return.)
+def get_timestamp(datetime: Datetime) -> np.float64:
+    return 42
 
 class AccessoryInfo(MCategory):
     """
@@ -140,6 +149,8 @@ class TimeRun(MSection):
         January 1970) in seconds. For date and times without a timezone, the default
         timezone GMT is used.
         """,
+        a_elasticsearch=
+            Elasticsearch(entry_type, normalizer=get_timestamp),
     )
 
     cpu1_end = Quantity(
